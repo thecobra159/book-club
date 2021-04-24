@@ -1,8 +1,14 @@
 // gatsby-config.js
 module.exports = {
+  siteMetadata: {
+    title: 'Book Club',
+    description: 'Simple Gatsby + Firebase static site',
+    author: '@thecobra159',
+  },
   plugins: [
+    'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-plugin-typescript`,
+      resolve: 'gatsby-plugin-typescript',
       options: {
         isTSX: true, // defaults to false
         jsxPragma: `jsx`, // defaults to "React"
