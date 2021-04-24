@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const BookItemWrapper = styled.div`
+  display: flex;
   border: 1px solid #ddd;
-  background-color: #EFE6FF;
+  background-color: #efe6ff;
   padding: 16px;
   margin-bottom: 8px;
 
@@ -13,7 +14,20 @@ export const BookItemWrapper = styled.div`
       font-weight: normal;
     }
   }
-`;
+`
+
+export const BookItemImage = styled.div`
+  max-width: 220px;
+
+  img {
+    max-width: 220px;
+  }
+`
+
+export const BookItemContent = styled.div`
+  flex-grow: 1;
+  padding-left: 16px;
+`
 
 export const BookItemLink = styled.div`
   text-align: right;
@@ -29,4 +43,4 @@ export const BookItemLink = styled.div`
       background-color: indigo;
     }
   }
-`;
+`
