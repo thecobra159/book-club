@@ -10,7 +10,7 @@ interface SEOProps {
   title: string
 }
 
-function Seo({ description = '', lang = '', meta = [], title = '' }: SEOProps) {
+function SEO({ description = '', lang = '', meta = [], title = '' }: SEOProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -71,17 +71,17 @@ function Seo({ description = '', lang = '', meta = [], title = '' }: SEOProps) {
   )
 }
 
-Seo.defaultProps = {
+SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
 }
 
-Seo.propTypes = {
+SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }
 
-export default Seo
+export default SEO
